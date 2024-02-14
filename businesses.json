@@ -1,0 +1,22 @@
+[{
+    "name": "Macy's",
+    "address": "513 1st St",
+    "email": "macys@us.com",
+    "website": "macys.com",
+    "phoneNumber": "5555555555"
+    
+    },
+{
+    "name": "Home Depot",
+    "address": "319 1st St",
+    "email": "homedepot@us.com",
+    "website": "homedepot.com",
+    "phoneNumber": "5555557777"
+    },
+{
+    "name": "Dairy Queen",
+    "address": "712 1st St",
+    "email": "dairyqueen@us.com",
+    "website": "dairyqueen.com",
+    "phoneNumber": "5555553333"
+}]
