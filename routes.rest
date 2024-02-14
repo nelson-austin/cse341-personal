@@ -1,0 +1,30 @@
+// LOCALHOST
+GET http://localhost:8080/businesses 
+###
+POST http://localhost:8080/businesses HTTP/1.1 
+content-type: application/json
+
+{
+    "name":"Twitter",
+    "address":"321 Main St",
+    "email":"x@elonmusk.com",
+    "website":"twitter.com",
+    "phoneNumber":"5552221356"
+}
+###
+
+
+// RENDER
+GET http://nelson-austin.onrender.com/businesses 
+###
+POST http://nelson-austin.onrender.com/businesses HTTP/1.1 
+content-type: application/json
+
+{
+    "name":"Twitter",
+    "address":"321 Main St",
+    "email":"x@elonmusk.com",
+    "website":"twitter.com",
+    "phoneNumber":"5552221356"
+}
+###
