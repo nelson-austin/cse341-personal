@@ -2,11 +2,11 @@ const router = require('express').Router();
 
 const businessesController = require('../controllers');
 
-router.post('/', businessesController.createBusiness);
-
 router.get('/', businessesController.getAll);
 
 router.get('/:id', businessesController.getSingle);
+
+router.post('/', businessesController.createBusiness);
 
 router.put('/:id', businessesController.updateBusiness);
 

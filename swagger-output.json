@@ -22,6 +22,17 @@
       }
     },
     "/businesses/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "post": {
         "description": "",
         "parameters": [
@@ -31,19 +42,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "lastName": {
+                "address": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "website": {
                   "example": "any"
                 },
-                "birthday": {
+                "phoneNumber": {
                   "example": "any"
                 }
               }
@@ -56,17 +67,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      },
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
           }
         }
       }
@@ -106,19 +106,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "lastName": {
+                "address": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "website": {
                   "example": "any"
                 },
-                "birthday": {
+                "phoneNumber": {
                   "example": "any"
                 }
               }
