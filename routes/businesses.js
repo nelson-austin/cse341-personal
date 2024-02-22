@@ -1,14 +1,15 @@
 const router = require('express').Router();
 
 const businessesController = require('../controllers');
+const { businessValidationRules, validate } = require('../middleware/validation.js');
 
 router.get('/', businessesController.getAll);
 
 router.get('/:id', businessesController.getSingle);
 
-router.post('/', businessesController.createBusiness);
+router.post('/', businessValidationRules(), validate, businessesController.createBusiness);
 
-router.put('/:id', businessesController.updateBusiness);
+router.put('/:id', businessValidationRules(), validate, businessesController.updateBusiness);
 
 router.delete('/:id', businessesController.deleteBusiness);
 

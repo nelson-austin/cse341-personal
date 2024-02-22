@@ -1,5 +1,7 @@
 // LOCALHOST
-GET http://localhost:8080/businesses 
+GET http://localhost:8080/businesses
+###
+GET http://localhost:8080/businesses/65cc5dd6901a6efceaaab277
 ###
 POST http://localhost:8080/businesses HTTP/1.1 
 content-type: application/json
@@ -7,15 +9,29 @@ content-type: application/json
 {
     "name":"Twitter",
     "address":"321 Main St",
-    "email":"x@elonmusk.com",
+    "email":"f",
     "website":"twitter.com",
     "phoneNumber":"5552221356"
 }
 ###
+PUT http://localhost:8080/businesses/65b5cbd6c3c1594787c71133 HTTP/1.1 
+content-type: application/json
 
+{
+    "name":"Twitter",
+    "address":"321 Main St",
+    "email":"f",
+    "website":"twitter.com",
+    "phoneNumber":"5552221356"
+}
+###
+DELETE http://localhost:8080/businesses/65bc9079182db1ede2fe1905 HTTP/1.1
+###
 
 // RENDER
 GET http://nelson-austin.onrender.com/businesses 
+###
+GET http://nelson-austin.onrender.com/businesses/65cc5dd6901a6efceaaab277
 ###
 POST http://nelson-austin.onrender.com/businesses HTTP/1.1 
 content-type: application/json
@@ -27,4 +43,17 @@ content-type: application/json
     "website":"twitter.com",
     "phoneNumber":"5552221356"
 }
+###
+PUT http://nelson-austin.onrender.com/businesses/65cc5dd6901a6efceaaab277 HTTP/1.1 
+content-type: application/json
+
+{
+    "name":"Twitter",
+    "address":"321 Main St",
+    "email":"x@elonmusk.com",
+    "website":"twitter.com",
+    "phoneNumber":"5552221356"
+}
+###
+GET http://nelson-austin.onrender.com/businesses/65cc5dd6901a6efceaaab277 HTTP/1.1
 ###

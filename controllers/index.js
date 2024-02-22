@@ -27,6 +27,9 @@ const getAll = async (req, res, next) => {
 };
 
 const getSingle = async (req, res, next) => {
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Invalid business id. Please try again.');
+    }
     const businessId = new ObjectId(req.params.id);
     const result = await mongodb.getDb().db('personal-project').collection('businesses').find({ _id: businessId });
     result.toArray().then((lists) => {
@@ -36,6 +39,9 @@ const getSingle = async (req, res, next) => {
 };
 
 const updateBusiness = async (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Invalid business id. Please try again.');
+    }
     const businessId = new ObjectId(req.params.id);
 
     const business = {
@@ -55,6 +61,9 @@ const updateBusiness = async (req, res) => {
 };
 
 const deleteBusiness = async (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Invalid business id. Please try again.');
+    }
     const businessId = new ObjectId(req.params.id);
     const response = await mongodb.getDb().db('personal-project').collection('businesses').deleteOne({ _id: businessId }, true);
     console.log(response);
