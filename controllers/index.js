@@ -51,7 +51,7 @@ const updateBusiness = async (req, res) => {
         website: req.body.website,
         phoneNumber: req.body.phoneNumber
     };
-    const response = await mongodb.getDb().db('personal-project').collection('businesses').replaceOne({ _id: businessId }, contact);
+    const response = await mongodb.getDb().db('personal-project').collection('businesses').replaceOne({ _id: businessId }, business);
     console.log(response);
     if (response.modifiedCount > 0) {
         res.status(204).send();

@@ -14,18 +14,18 @@ content-type: application/json
     "phoneNumber":"5552221356"
 }
 ###
-PUT http://localhost:8080/businesses/65b5cbd6c3c1594787c71133 HTTP/1.1 
+PUT http://localhost:8080/businesses/65d68b6afa0ef8fc35802358 HTTP/1.1 
 content-type: application/json
 
 {
-    "name":"Twitter",
+    "name":"Twitter2",
     "address":"321 Main St",
-    "email":"f",
+    "email":"x@elonmusk.com",
     "website":"twitter.com",
     "phoneNumber":"5552221356"
 }
 ###
-DELETE http://localhost:8080/businesses/65bc9079182db1ede2fe1905 HTTP/1.1
+DELETE http://localhost:8080/businesses/65d68b6afa0ef8fc35802358 HTTP/1.1
 ###
 
 // RENDER
