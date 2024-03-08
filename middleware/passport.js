@@ -14,18 +14,21 @@ module.exports = function(passport) {
             displayName: profile.displayName,
             image: profile.photos[0].value,
         }
-        try {
-            let user = await User.findOne({ googleId: profile.id })
+        User.findorCreate({ google:id }, function ( err, user) {
+            return done(err, user);
+        })
+        //try {
+            //let user = await User.findOne({ googleId: profile.id })
 
-            if(user) {
-                done(null, user);
-            } else {
-                user = await User.create(newUser);
-                done(null, user);
-            }
-        } catch (err) {
-            console.error(err);
-        }
+            //if(user) {
+                //done(null, user);
+            //} else {
+                //user = await User.create(newUser);
+                //done(null, user);
+            //}
+        //} catch (err) {
+            //console.error(err);
+        //}
     }))
 
     passport.serializeUser(function(user, done) {
