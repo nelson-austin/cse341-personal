@@ -8,6 +8,6 @@ router.get('/', ensureGuest, function(req, res){
     res.sendFile(path.join(__dirname + '/../public/auth.html'));
 })
 router.use('/businesses', ensureAuth, require('./businesses'));
-router.use('/', require('./auth'));
+router.use('/auth', require('./auth'));
 
 module.exports = router;
