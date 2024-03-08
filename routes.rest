@@ -9,7 +9,7 @@ content-type: application/json
 {
     "name":"Twitter",
     "address":"321 Main St",
-    "email":"f",
+    "email":"x@elonmusk.com",
     "website":"twitter.com",
     "phoneNumber":"5552221356"
 }
